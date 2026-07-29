@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="HealthPass — BA case study về hồ sơ y tế cá nhân, chăm sóc sau khám và chia sẻ dữ liệu có kiểm soát." />
+  <meta name="theme-color" content="#0b5bd3" />
+  <title>HealthPass — Personal BA Case Study</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="HealthPass home">
+      <span class="brand-mark" aria-hidden="true">+</span>
+      <span>Health<span>Pass</span></span>
+    </a>
+    <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span><span class="sr-only">Mở menu</span>
+    </button>
+    <nav class="site-nav" id="siteNav" aria-label="Điều hướng chính">
+      <a href="#context">Bối cảnh</a>
+      <a href="#research">Interview</a>
+      <a href="#personas">Persona</a>
+      <a href="#insights">Insight</a>
+      <a href="#direction">Định hướng</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">BA FOUNDATION CAPSTONE · PERSONAL CASE STUDY</p>
+        <h1 id="hero-title">Hồ sơ sức khỏe<br /><span>sẵn sàng khi cần.</span></h1>
+        <p class="hero-lead">
+          HealthPass là ý tưởng nền tảng giúp người bệnh tập hợp hồ sơ y tế từ nhiều nguồn,
+          theo dõi chăm sóc sau khám và chia sẻ thông tin có kiểm soát với bác sĩ hoặc nhân viên y tế.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#context">Khám phá dự án</a>
+          <a class="button ghost" href="#research">Xem nghiên cứu người dùng</a>
+        </div>
+        <dl class="project-meta" aria-label="Thông tin dự án">
+          <div><dt>Vai trò</dt><dd>Business Analyst</dd></div>
+          <div><dt>Phạm vi</dt><dd>Discovery & Research</dd></div>
+          <div><dt>Định dạng</dt><dd>Individual Project</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Minh họa HealthPass">
+        <div class="phone-frame">
+          <div class="phone-top"><span></span></div>
+          <div class="app-head">
+            <div><small>Xin chào,</small><strong>Minh Anh</strong></div>
+            <div class="avatar">MA</div>
+          </div>
+          <div class="health-score">
+            <div><small>Tổng quan hôm nay</small><strong>Mẹ đã uống thuốc sáng</strong></div>
+            <span>✓</span>
+          </div>
+          <div class="quick-grid">
+            <article><span>▤</span><strong>Timeline</strong><small>24 hồ sơ</small></article>
+            <article><span>⌁</span><strong>Chia sẻ</strong><small>QR / Link</small></article>
+            <article><span>◷</span><strong>Nhắc lịch</strong><small>2 việc hôm nay</small></article>
+            <article><span>✚</span><strong>Cấp cứu</strong><small>Thông tin nhanh</small></article>
+          </div>
+          <div class="timeline-preview">
+            <div class="preview-title"><strong>Gần đây</strong><small>Xem tất cả</small></div>
+            <div class="record"><span class="record-icon">Rx</span><div><strong>Đơn thuốc huyết áp</strong><small>12/06/2026 · Bệnh viện A</small></div></div>
+            <div class="record"><span class="record-icon">Lab</span><div><strong>Kết quả xét nghiệm</strong><small>03/05/2026 · Phòng khám B</small></div></div>
+          </div>
+        </div>
+        <div class="floating-note note-one"><strong>Patient-controlled</strong><span>Người bệnh kiểm soát dữ liệu</span></div>
+        <div class="floating-note note-two"><strong>Emergency-ready</strong><span>Thông tin tối thiểu, truy cập nhanh</span></div>
+      </div>
+    </section>
+
+    <aside class="prototype-note section-shell reveal" role="note">
+      <strong>Lưu ý bản thử nghiệm:</strong>
+      Nội dung interview và persona trong prototype này là dữ liệu mô phỏng để kiểm thử cấu trúc case study; cần thay bằng dữ liệu phỏng vấn thực tế trước khi công bố như nghiên cứu hoàn chỉnh.
+    </aside>
+
+    <section class="section section-shell" id="context">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 · MARKET CONTEXT</p>
+        <h2>Dữ liệu đã số hóa,<br /><span>trải nghiệm vẫn phân mảnh.</span></h2>
+        <p>
+          Mỗi lần khám tạo thêm đơn thuốc, xét nghiệm, hình ảnh chẩn đoán và lịch tái khám —
+          nhưng người bệnh vẫn phải tự ghép các mảnh dữ liệu từ giấy, ảnh, PDF và ứng dụng riêng của từng cơ sở.
+        </p>
+      </div>
+
+      <div class="stat-grid">
+        <article class="stat-card reveal"><strong data-count="1718">0</strong><span>bệnh viện</span><small>trong hệ thống y tế Việt Nam, theo tài liệu dự án</small></article>
+        <article class="stat-card reveal"><strong data-count="170">0</strong><span>triệu lượt khám ngoại trú</span><small>mỗi năm</small></article>
+        <article class="stat-card reveal"><strong data-count="34">0</strong><span>triệu+ sổ sức khỏe điện tử</span><small>được tích hợp vào VNeID đầu năm 2026</small></article>
+        <article class="stat-card reveal"><strong data-count="85.6">0</strong><span>triệu người dùng Internet</span><small>cuối năm 2025</small></article>
+      </div>
+
+      <div class="context-grid">
+        <article class="problem-card reveal">
+          <span class="card-number">01</span>
+          <h3>Hồ sơ nằm ở nhiều nguồn</h3>
+          <p>Giấy in, ảnh chụp, PDF, tin nhắn và app bệnh viện khiến dữ liệu khó tìm lại đúng lúc.</p>
+        </article>
+        <article class="problem-card reveal">
+          <span class="card-number">02</span>
+          <h3>Phụ thuộc vào trí nhớ</h3>
+          <p>Khi tái khám, người bệnh thường phải kể lại bệnh sử, tên thuốc và kết quả cũ từ trí nhớ.</p>
+        </article>
+        <article class="problem-card reveal">
+          <span class="card-number">03</span>
+          <h3>Khoảng trống sau khám</h3>
+          <p>Nhắc thuốc, tái khám và theo dõi chỉ số hằng ngày vẫn được thực hiện thủ công hoặc không đều.</p>
+        </article>
+        <article class="problem-card reveal">
+          <span class="card-number">04</span>
+          <h3>Thiếu thông tin khi cấp cứu</h3>
+          <p>Nhân viên y tế có thể không biết dị ứng, bệnh nền, thuốc đang dùng hoặc liên hệ khẩn cấp.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt-section" id="landscape">
+      <div class="section-shell">
+        <div class="section-heading compact reveal">
+          <p class="eyebrow">CURRENT LANDSCAPE</p>
+          <h2>Các giải pháp hiện tại chỉ giải quyết <span>một phần bài toán.</span></h2>
+        </div>
+        <div class="comparison-wrap reveal" tabindex="0" aria-label="Bảng so sánh giải pháp hiện tại">
+          <table class="comparison-table">
+            <thead><tr><th>Giải pháp</th><th>Điểm mạnh</th><th>Khoảng trống</th></tr></thead>
+            <tbody>
+              <tr><td>Hồ sơ giấy</td><td>Quen thuộc, dễ hiểu</td><td>Dễ mất, khó tìm và không có timeline</td></tr>
+              <tr><td>Ảnh / PDF</td><td>Lưu và gửi nhanh</td><td>Rải rác, khó phân loại, thiếu cấu trúc</td></tr>
+              <tr><td>App bệnh viện</td><td>Dữ liệu trong một hệ sinh thái</td><td>Không gom được hồ sơ từ nhiều nơi</td></tr>
+              <tr><td>Medpro / MyVinmec</td><td>Đặt khám và quản lý dữ liệu trong hệ thống</td><td>Chưa phải kho hồ sơ cá nhân độc lập đa nguồn</td></tr>
+              <tr><td>VNeID / Sổ sức khỏe điện tử</td><td>Định hướng tích hợp dữ liệu chính thống</td><td>Chưa tối ưu cho tự tổ chức, theo dõi sau khám và chia sẻ tạm thời theo quyền</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <blockquote class="gap-quote reveal">
+          “Khoảng trống không nằm ở việc chưa có dữ liệu y tế số, mà ở việc người bệnh chưa có một lớp quản lý cá nhân để tổ chức, theo dõi và chia sẻ dữ liệu theo đúng ngữ cảnh.”
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section section-shell" id="research">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 · USER RESEARCH</p>
+        <h2>Nghe từ cả <span>người sở hữu dữ liệu</span><br />và người cần sử dụng dữ liệu.</h2>
+        <p>Phạm vi interview mô phỏng bao phủ ba bệnh nhân/người chăm sóc, hai bác sĩ và một điều dưỡng cấp cứu.</p>
+      </div>
+
+      <div class="research-overview reveal">
+        <div><strong>6</strong><span>Interview profiles</span></div>
+        <div><strong>2</strong><span>User sides</span></div>
+        <div><strong>3</strong><span>Synthesized personas</span></div>
+        <div><strong>8</strong><span>Key insights</span></div>
+      </div>
+
+      <div class="filter-row reveal" role="group" aria-label="Lọc interview">
+        <button class="filter-button active" data-filter="all">Tất cả</button>
+        <button class="filter-button" data-filter="patient">Patient-side</button>
+        <button class="filter-button" data-filter="medical">Medical-side</button>
+      </div>
+
+      <div class="interview-grid" id="interviewGrid">
+        <article class="interview-card reveal" data-group="patient">
+          <div class="interview-id">I01</div><div class="interview-role">Caregiver</div>
+          <h3>Nguyễn Minh Anh</h3>
+          <p>Quản lý hồ sơ cho mẹ mắc tăng huyết áp và tiểu đường type 2.</p>
+          <ul><li>Hồ sơ rải rác nhiều nơi</li><li>Khó tìm kết quả gần nhất</li><li>Lo thiếu bệnh sử khi cấp cứu</li></ul>
+          <button class="view-snapshot" data-image="assets/images/interview-caregiver.webp" data-title="I01 — Nguyễn Minh Anh">Xem snapshot</button>
+        </article>
+        <article class="interview-card reveal" data-group="patient">
+          <div class="interview-id">I02</div><div class="interview-role">Chronic patient</div>
+          <h3>Phạm Thị Hạnh</h3>
+          <p>Uống thuốc huyết áp hằng ngày nhưng không ghi lại chỉ số thường xuyên.</p>
+          <ul><li>Dễ quên thuốc</li><li>Thiếu dữ liệu theo dõi tại nhà</li><li>Không thích app nhiều bước</li></ul>
+          <button class="view-snapshot" data-image="assets/images/interview-chronic-patient.webp" data-title="I02 — Phạm Thị Hạnh">Xem snapshot</button>
+        </article>
+        <article class="interview-card reveal" data-group="patient">
+          <div class="interview-id">I03</div><div class="interview-role">Multi-provider patient</div>
+          <h3>Lê Quang Huy</h3>
+          <p>Có kết quả khám ở bệnh viện công, phòng khám tư và trung tâm xét nghiệm.</p>
+          <ul><li>Dữ liệu ở nhiều kênh</li><li>Không biết bản mới nhất</li><li>Lo quyền riêng tư khi gửi Zalo</li></ul>
+          <button class="view-snapshot" data-image="assets/images/interview-multi-provider.webp" data-title="I03 — Lê Quang Huy">Xem snapshot</button>
+        </article>
+        <article class="interview-card reveal" data-group="medical">
+          <div class="interview-id">I04</div><div class="interview-role">General doctor</div>
+          <h3>BS. Trần Hoàng Nam</h3>
+          <p>Thường tiếp nhận bệnh nhân không nhớ rõ bệnh sử hoặc thuốc đang dùng.</p>
+          <ul><li>Hồ sơ rời rạc, thiếu ngày tháng</li><li>Mất thời gian xem ảnh/PDF</li><li>Cần tóm tắt ngắn gọn</li></ul>
+          <button class="view-snapshot" data-image="assets/images/interview-general-doctor.webp" data-title="I04 — BS. Trần Hoàng Nam">Xem snapshot</button>
+        </article>
+        <article class="interview-card reveal" data-group="medical">
+          <div class="interview-id">I05</div><div class="interview-role">Emergency doctor</div>
+          <h3>BS. Nguyễn Thu Lan</h3>
+          <p>Tiếp nhận bệnh nhân tai nạn, mất ý thức hoặc sốc phản vệ.</p>
+          <ul><li>Không có người nhà cung cấp bệnh sử</li><li>Điện thoại thường bị khóa</li><li>Chỉ cần dữ liệu sống còn</li></ul>
+          <div class="snapshot-placeholder" aria-label="Snapshot chưa có trong file ZIP"><span>TL</span><small>Snapshot chưa có trong ZIP</small></div>
+        </article>
+        <article class="interview-card reveal" data-group="medical">
+          <div class="interview-id">I06</div><div class="interview-role">Emergency nurse</div>
+          <h3>ĐD. Phạm Quốc Bình</h3>
+          <p>Tiếp xúc ban đầu, đo sinh hiệu, tìm giấy tờ và liên hệ người nhà.</p>
+          <ul><li>Khó tìm liên hệ khẩn cấp</li><li>Không mở được app khi máy khóa</li><li>Đăng nhập quá chậm cho cấp cứu</li></ul>
+          <button class="view-snapshot" data-image="assets/images/interview-emergency-nurse.webp" data-title="I06 — ĐD. Phạm Quốc Bình">Xem snapshot</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section insight-section" id="insights">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow light">03 · SYNTHESIS</p>
+          <h2>Interview không chỉ tạo quote.<br /><span>Nó định hình sản phẩm.</span></h2>
+        </div>
+        <div class="insight-list">
+          <article class="insight-item reveal"><span>01</span><div><h3>Hồ sơ bị phân mảnh</h3><p>I01, I03 → Smart Record Import, Health Timeline và search/filter.</p></div></article>
+          <article class="insight-item reveal"><span>02</span><div><h3>Khoảng trống sau khám</h3><p>I02 → Medication Reminder, Recall Reminder và Daily Health Log.</p></div></article>
+          <article class="insight-item reveal"><span>03</span><div><h3>Bác sĩ cần thông tin có cấu trúc</h3><p>I04 → Doctor Visit Summary và Doctor View dạng web, chỉ đọc.</p></div></article>
+          <article class="insight-item reveal"><span>04</span><div><h3>Chia sẻ phải có kiểm soát</h3><p>I03 → QR/link có hạn, thu hồi quyền và OTP cho dữ liệu nhạy cảm.</p></div></article>
+          <article class="insight-item reveal"><span>05</span><div><h3>Cấp cứu cần truy cập ngoài app</h3><p>I05, I06 → Emergency Profile, Medical ID/lock-screen và QR/NFC backup.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-shell" id="personas">
+      <div class="section-heading reveal">
+        <p class="eyebrow">04 · USER PERSONAS</p>
+        <h2>Ba chân dung đại diện cho<br /><span>hai nhóm người dùng chính.</span></h2>
+      </div>
+
+      <div class="user-groups reveal">
+        <div><span>Primary users</span><strong>Patient & Caregiver</strong><small>Quản lý dữ liệu, sử dụng app thường xuyên</small></div>
+        <div><span>Secondary users</span><strong>Doctor & Emergency Staff</strong><small>Nhận/xem dữ liệu trong ngữ cảnh cụ thể</small></div>
+      </div>
+
+      <div class="persona-grid">
+        <article class="persona-card reveal">
+          <div class="persona-top"><div class="persona-avatar">MA</div><div><span>PRIMARY · CAREGIVER</span><h3>Nguyễn Minh Anh</h3><small>29 tuổi · Nhân viên văn phòng</small></div></div>
+          <p>Quản lý hồ sơ và hành trình khám chữa bệnh cho mẹ mắc bệnh mạn tính.</p>
+          <div class="persona-columns"><div><h4>Goals</h4><ul><li>Gom hồ sơ vào một nơi</li><li>Tìm kết quả nhanh</li><li>Nhắc thuốc và tái khám</li></ul></div><div><h4>Needs</h4><ul><li>Health Timeline</li><li>Doctor Visit Summary</li><li>Emergency Profile</li></ul></div></div>
+          <blockquote>“Em chỉ cần một chỗ lưu hết hồ sơ của mẹ và đưa bác sĩ xem nhanh phần quan trọng.”</blockquote>
+          <small class="traceability">Synthesized from I01, I02, I03</small>
+        </article>
+
+        <article class="persona-card reveal">
+          <div class="persona-top"><div class="persona-avatar warm">HH</div><div><span>PRIMARY · PATIENT</span><h3>Phạm Thị Hạnh</h3><small>54 tuổi · Người bệnh mạn tính</small></div></div>
+          <p>Uống thuốc huyết áp hằng ngày nhưng cần một trải nghiệm đơn giản để theo dõi tại nhà.</p>
+          <div class="persona-columns"><div><h4>Goals</h4><ul><li>Uống thuốc đúng giờ</li><li>Không quên tái khám</li><li>Có dữ liệu đưa bác sĩ</li></ul></div><div><h4>Needs</h4><ul><li>Medication Reminder</li><li>Daily Health Log</li><li>Simple Overview</li></ul></div></div>
+          <blockquote>“Đến lúc bác sĩ hỏi thì tôi chỉ nhớ có hôm huyết áp cao, không nhớ chính xác số.”</blockquote>
+          <small class="traceability">Synthesized from I02</small>
+        </article>
+
+        <article class="persona-card reveal">
+          <div class="persona-top"><div class="persona-avatar emergency">QB</div><div><span>SECONDARY · EMERGENCY</span><h3>Phạm Quốc Bình</h3><small>31 tuổi · Điều dưỡng cấp cứu</small></div></div>
+          <p>Cần thông tin tối thiểu, rõ ràng và truy cập được ngay cả khi bệnh nhân không thể giao tiếp.</p>
+          <div class="persona-columns"><div><h4>Goals</h4><ul><li>Xem dị ứng và bệnh nền</li><li>Tìm liên hệ khẩn cấp</li><li>Không mất thời gian đăng nhập</li></ul></div><div><h4>Needs</h4><ul><li>Guest Emergency View</li><li>QR/NFC backup</li><li>Minimum Data Display</li></ul></div></div>
+          <blockquote>“Nếu phải tải app hay đăng nhập thì gần như không dùng được trong cấp cứu.”</blockquote>
+          <small class="traceability">Synthesized from I05, I06</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt-section" id="direction">
+      <div class="section-shell">
+        <div class="direction-grid">
+          <div class="section-heading compact reveal">
+            <p class="eyebrow">05 · PRODUCT DIRECTION</p>
+            <h2>Từ kho lưu trữ<br /><span>đến lớp hành động sức khỏe.</span></h2>
+            <p>
+              HealthPass không thay thế bệnh án điện tử hay xây database chung cho toàn bộ bệnh viện.
+              Sản phẩm đóng vai trò lớp hồ sơ cá nhân do người bệnh kiểm soát, kết nối dữ liệu với hành động chăm sóc hằng ngày.
+            </p>
+          </div>
+          <div class="positioning-card reveal">
+            <div><small>Official infrastructure</small><strong>VNeID / EMR</strong><span>Dữ liệu y tế chính thống</span></div>
+            <span class="position-arrow">→</span>
+            <div class="highlight"><small>Personal action layer</small><strong>HealthPass</strong><span>Tổ chức · Theo dõi · Chia sẻ · Cấp cứu</span></div>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal"><span>01</span><h3>Smart Record Import</h3><p>Nhận ảnh, PDF, nhập tay hoặc QR/link; phân loại hồ sơ theo loại và ngày.</p></article>
+          <article class="feature-card reveal"><span>02</span><h3>Health Timeline</h3><p>Tổ chức lịch sử khám, xét nghiệm, đơn thuốc và tái khám thành dòng thời gian.</p></article>
+          <article class="feature-card reveal"><span>03</span><h3>Care Plan & Reminder</h3><p>Biến đơn thuốc và lời dặn thành nhắc thuốc, lịch tái khám và việc cần theo dõi.</p></article>
+          <article class="feature-card reveal"><span>04</span><h3>Doctor View</h3><p>Web view tối giản qua QR/link, chỉ hiển thị dữ liệu bệnh nhân chủ động chia sẻ.</p></article>
+          <article class="feature-card reveal"><span>05</span><h3>Permission Sharing</h3><p>Giới hạn thời gian, thu hồi quyền và OTP tùy độ nhạy cảm của dữ liệu.</p></article>
+          <article class="feature-card reveal"><span>06</span><h3>Emergency Profile</h3><p>Dữ liệu tối thiểu qua lock-screen, Medical ID hoặc QR/NFC dự phòng.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-shell" id="logic">
+      <div class="section-heading reveal">
+        <p class="eyebrow">06 · CORE LOGIC</p>
+        <h2>Đơn giản hóa trải nghiệm,<br /><span>không đơn giản hóa quyền riêng tư.</span></h2>
+      </div>
+      <div class="logic-grid">
+        <article class="logic-card reveal"><h3>Patient ownership</h3><p>Patient/Caregiver kiểm soát hồ sơ và chọn dữ liệu nào được chia sẻ.</p></article>
+        <article class="logic-card reveal"><h3>View-only doctor access</h3><p>Bác sĩ không cần tài khoản trong MVP và không được chỉnh sửa hồ sơ gốc.</p></article>
+        <article class="logic-card reveal"><h3>Expiring bearer token</h3><p>QR/link gắn token có hạn; hệ thống hỗ trợ thu hồi tức thời và OTP tùy trường hợp.</p></article>
+        <article class="logic-card reveal"><h3>Minimum emergency data</h3><p>Emergency View chỉ hiển thị thông tin cần thiết, không mở toàn bộ bệnh án.</p></article>
+      </div>
+    </section>
+
+    <section class="closing-section">
+      <div class="section-shell closing-inner reveal">
+        <p class="eyebrow light">PROJECT TAKEAWAY</p>
+        <h2>HealthPass không chỉ lưu lại điều đã xảy ra trong bệnh viện.</h2>
+        <p>Nó giúp người bệnh quản lý điều diễn ra sau khi rời bệnh viện — và chuẩn bị thông tin đúng lúc cho người cần nó.</p>
+        <a class="button light" href="#top">Quay lại đầu trang</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div><strong>HealthPass</strong><span>BA Foundation · Personal Case Study</span></div>
+    <p>Static HTML prototype · Ready for Vercel deployment</p>
+  </footer>
+
+  <dialog class="image-modal" id="imageModal">
+    <button class="modal-close" id="modalClose" aria-label="Đóng">×</button>
+    <h2 id="modalTitle">Interview snapshot</h2>
+    <img id="modalImage" src="" alt="" />
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
